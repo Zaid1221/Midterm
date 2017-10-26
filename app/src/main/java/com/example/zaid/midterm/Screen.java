@@ -36,7 +36,7 @@ public class Screen extends LinearLayout
         editText = new EditText(context);
         LinearLayout.LayoutParams editTextParams = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
         editTextParams.gravity = Gravity.CENTER_HORIZONTAL;
-        editText.setHint("Enter title");
+        editText.setHint("Enter zipcode");
         editText.setTextSize(30);
         linear.addView(editText, editTextParams);
 
@@ -62,5 +62,16 @@ public class Screen extends LinearLayout
     public boolean isButton(Button b)
     {
         return (b == button);
+    }
+
+    public String UserInput(String input)
+    {
+        input = editText.getText().toString();
+        return input;
+    }
+
+    public void setTextView(String textview)
+    {
+        textView.setText(textview.toString());
     }
 }
